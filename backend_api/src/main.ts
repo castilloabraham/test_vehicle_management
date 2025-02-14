@@ -15,6 +15,8 @@ async function bootstrap() {
 
 
   app.setGlobalPrefix('api');
+
+  app.enableCors(); /* Permite que el front se conecte */
   await app.listen(process.env.PORT ?? 4000);
 }
 bootstrap();

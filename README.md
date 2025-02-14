@@ -15,8 +15,8 @@ Sigue los pasos a continuación para configurar y ejecutar el backend de este pr
 ### 1. Clona el repositorio y accede al directorio del backend
 
 ```bash
-$ git clone https://github.com/castilloabraham/PizzaTuaPT.git
-$ cd backend
+$ git clone https://github.com/castilloabraham/test_vehicle_management.git
+$ cd backend_api
 ```
 
 ### 2. Instala las dependencias
@@ -47,8 +47,39 @@ DB_NAME=nombre_db
 $ npm run typeorm migration:run
 ```
 
-## 5. Compilar y ejecutar el proyecto
+### 5. Compilar y ejecutar el proyecto
 ```bash
 #Desarrollo
 $ npm run start:dev
 ```
+
+## Documentación del API
+Puede obtener documentacion del API y sus Endpoint, en el siguiente link: http://localhost:4000/api/
+
+## Configuración del Frontend
+
+Sigue los pasos a continuación para configurar y ejecutar el frontend de este proyecto.
+
+### 1. Clona el repositorio y accede al directorio del frontend
+
+```bash
+$ git clone https://github.com/castilloabraham/test_vehicle_management.git
+$ cd frontend
+```
+
+### 2. Instala las dependencias
+```bash
+$ npm install
+```
+
+### 3. Configura las variables de entorno
+Dentro del directorio del frontend, crea un archivo llamado .env.local y dentro de este archivo, define las siguientes variables de entorno. Estas variables son esenciales para conectar el frontend con el backend.
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
+
+### 5. CEjecutar el proyecto
+```bash
+$ npm run dev
+```
+

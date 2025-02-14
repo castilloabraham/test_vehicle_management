@@ -6,7 +6,7 @@ export async function ListVehicle() {
     const vehicles = await getVehicles();
 
     return (
-        <ul role="list" className="divide-y divide-gray-100">
+        <ul role="list" className="divide-y divide-gray-300">
         {vehicles.map((vehicle: any) => (
             <ItemVehicle vehicle={vehicle} key={vehicle.id} />
         ))}

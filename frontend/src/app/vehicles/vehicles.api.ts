@@ -1,6 +1,7 @@
 
-/*export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;*/
-export const BACKEND_URL = 'http://localhost:4000';
+export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+/*export const BACKEND_URL = 'http://localhost:4000';*/
+
 export async function getVehicles() {
   const data = await fetch(`${BACKEND_URL}/api/vehicles`, {
       cache: "no-store",

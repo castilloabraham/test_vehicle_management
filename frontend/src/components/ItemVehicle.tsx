@@ -15,7 +15,7 @@ export function ItemVehicle({ vehicle }: any) {
     }
   
     return (
-        <li key={vehicle.id} className="flex justify-between gap-x-6 py-5">
+      <li key={vehicle.id} className="flex justify-between gap-x-6 py-5">
         <div className="flex min-w-0 gap-x-4">
           <div className="min-w-0 flex-auto">
             <p className="text-sm/6 font-semibold text-gray-900">{vehicle.brand} {vehicle.model}</p>
@@ -24,9 +24,9 @@ export function ItemVehicle({ vehicle }: any) {
             <p className="mt-1 truncate text-xs/5 text-gray-500">Descripción: {vehicle.description}</p>
           </div>
         </div>
-        <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
+        <div className="shrink-0 sm:flex flex-col sm:items-end">
         <Link
-            className="mt-5"
+            className="mt-5 bg-yellow-300 px-4 py-2 rounded-md m-1"
             href={`/vehicles/${vehicle.id}/edit`}
             onClick={(e) => {
                 e.preventDefault();
@@ -34,11 +34,11 @@ export function ItemVehicle({ vehicle }: any) {
                 router.push(`/vehicles/${vehicle.id}/edit`);
             }}
         >
-          Editar
+          Edit
         </Link>
 
         <Link
-            className="mt-5"
+            className="mt-5 bg-red-600 text-white px-4 py-2 rounded-md m-1"
             href="#"
             onClick={(e) => {
                 e.preventDefault();
@@ -46,7 +46,7 @@ export function ItemVehicle({ vehicle }: any) {
                 handleRemoveVehicle(vehicle.id);
             }}
         >
-          Eliminar
+          Delete
         </Link>
         </div>
       </li>

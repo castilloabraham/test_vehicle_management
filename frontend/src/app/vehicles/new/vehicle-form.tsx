@@ -37,18 +37,18 @@ export function VehicleForm({vehicle}: any) {
       });
 
     return (
-        <form onSubmit={onSubmit} className="flex flex-col gap-2">
-            <input {...register("brand")}  type="text" placeholder="Marca"/>
+        <form onSubmit={onSubmit} className="flex flex-col gap-2 mt-6">
+            <input {...register("brand")}  type="text" placeholder="Marca" className="rounded-md h-12 p-2"/>
             
-            <input {...register("model")}  type="text" placeholder="Modelo"/>
+            <input {...register("model")}  type="text" placeholder="Modelo" className="rounded-md h-12 p-2"/>
             
-            <input {...register("year")}  type="text" placeholder="Año"/>
+            <input {...register("year")}  type="text" placeholder="Año" className="rounded-md h-12 p-2"/>
             
-            <input {...register("price")}  type="text" placeholder="Precio"/>
+            <input {...register("price")}  type="text" placeholder="Precio" className="rounded-md h-12 p-2"/>
             
-            <textarea {...register("description")}  placeholder="Descripción"/>
+            <textarea {...register("description")}  placeholder="Descripción" className="rounded-md h-12 p-2"/>
 
-            <button>
+            <button className="bg-green-600 text-white px-4 py-2 rounded-md">
                 {
                     params.id ? 'Update vehicles' : 'Create vehicles'
                 }
